@@ -19,8 +19,8 @@ But please note that there are still a tons of vectors that detects injections.
 
 The concept is quite simple as follows:
 
-- **1.** Obtain a process handle with needed privileage.
-- **2.** Allocate memory in target process with size of a string of the path of dll that we want to load.
+- **1.** Obtain a process handle (`OpenProcess`) with needed privileage.
+- **2.** Allocate memory (`VirtualAllocEx`) in target process with size of a string of the path of dll that we want to load.
 - **3.** Write a payload of the dll path in allocated memory.
 - **4.** Get an address of `LoadLibraryA (kernel32.dll export)` with `GetProcAddress` in order to let the process to call it dynamically later.
 - **5.** Create thread remotely in target process with `CreateRemoteThread` and pass the address of what we got in 4 and parameter of the dll path that we allocated.
