@@ -6,7 +6,7 @@ A dll injector static library for Win x64 processes with handle elevation suppor
 # Overview
 
 This library provides dll injection against any x64 processes,  
-with the [handle elevation using capcom](https://github.com/notscimmy/libelevate) supported.
+with the [handle elevation using capcom](https://github.com/notscimmy/libelevate) supported. (anti `ObRegisterCallbacks`)
 
 The handle elevation allows you to elevate our process handle obtained by `OpenProcess`.  
 it means that we can call whatsoever winapis that need a process handle with granted access,  
