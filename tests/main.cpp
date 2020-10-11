@@ -2,7 +2,7 @@
 
 #include "libinject.h"
 
-int main()
+int main(int argc, const char** argv)
 {
     if (!inject(
         99999,                      // process id     
