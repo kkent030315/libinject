@@ -14,7 +14,7 @@ bool injector::perform_inject(
     if (elevate_handle)
     {
         //
-        // open the handle with lowest privileage
+        // open the handle with lowest privilege
         // in order to elevate
         //
         process_handle = OpenProcess(
