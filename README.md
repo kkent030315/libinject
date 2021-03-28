@@ -10,7 +10,7 @@ with the [handle elevation using capcom](https://github.com/notscimmy/libelevate
 
 The handle elevation allows you to elevate our process handle obtained by `OpenProcess`.  
 it means that we can call whatsoever winapis that need a process handle with granted access,  
-with highest privileage, even whether the process is protected or not.
+with highest privilege, even whether the process is protected or not.
 
 This is very useful to debug malwares that protected somehow.
 But please note that there are still a tons of vectors that detects injections.
@@ -19,7 +19,7 @@ But please note that there are still a tons of vectors that detects injections.
 
 The concept is quite simple as follows:
 
-- **1.** Obtain a process handle (`OpenProcess`) with needed privileage.
+- **1.** Obtain a process handle (`OpenProcess`) with needed privilege.
 - **2.** Allocate memory (`VirtualAllocEx`) in target process with size of a string of the path of dll that we want to load.
 - **3.** Write a payload of the dll path in allocated memory.
 - **4.** Get an address of `LoadLibraryA (kernel32.dll export)` with `GetProcAddress` in order to let the process to call it dynamically later.
